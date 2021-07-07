@@ -25,7 +25,7 @@ module.exports = {
         let embed = new MessageEmbed().setAuthor(message.author.tag,message.author.displayAvatarURL({ dynamic : true })).setColor('RANDOM').setFooter(config.bots.footer).setTimestamp()
         const date = new Date();
         const kalan = (new Date(finish - date).getTime() / 1000).toFixed(2);
-        return message.channel.send(embed.setDescription(`Bu komudu tekrardan kullanabilmek için **${kalan} saniye** beklemeniz gerekmektedir.`)).then(tedoa => tedoa.delete({ timeout : 5000 })).then(message.react(emoji.redemoj))
+        return message.channel.send(embed.setDescription(`Bu komudu tekrardan kullanabilmek için **${kalan} saniye** beklemeniz gerekmektedir.`)).then(tedoa => tedoa.delete({ timeout : 5000 })).then(message.react(emoji.tedoa))
     };
     
     const finish = new Date();
